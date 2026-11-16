@@ -6,3 +6,5 @@
 4. Définir `NEXT_PUBLIC_SITE_URL` pour produire des URL canoniques et un sitemap corrects.
 5. Configurer Stripe, e-mail et fournisseur IA seulement lorsque leurs modules auront été implémentés et testés. Les variables disponibles sont listées dans `.env.example`.
 6. Configurer les sauvegardes, alertes et procédure de restauration avant la mise en production. Aucun déploiement n'a été effectué.
+
+Le parcours de compte utilise `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`. Configurer dans Supabase l’URL du site et l’URL de redirection `/auth/callback` avant d’essayer l’inscription. La création d’un projet Supabase distinct est en attente d’une validation de coût.

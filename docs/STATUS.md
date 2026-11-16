@@ -16,3 +16,10 @@
 | Gamification, parrainage, boutique, dons, publicité | Non commencé | Flags désactivés |
 | Back-office, veille, analytics | Non commencé | — |
 | Documents juridiques | Nécessite une validation juridique | — |
+
+## Mise à jour du 16 novembre 2026 — compte et informations légales
+
+- Footer non fixe avec crédit Studio ATS et liens vers conditions, mentions, confidentialité et cookies : implémenté, vérifié localement sur ordinateur et mobile.
+- Bandeau d’information cookies : implémenté, choix mémorisé localement ; aucun traceur facultatif actif.
+- Inscription, connexion, déconnexion et page de compte : code implémenté et compilation validée ; activation bloquée par la création et la configuration d’un projet Supabase distinct. Aucun compte réel n’a encore été créé.
+- Pages légales : brouillons informatifs en ligne dans l’application ; identification de l’éditeur, contact, hébergeur et politique de conservation à valider avant une publication publique.
