@@ -2,8 +2,9 @@ import { createServerClient } from '@supabase/ssr';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { authConfigured } from '@/lib/supabase/config';
+import { isCompromisedPassword, passwordPolicyError } from '@/lib/password-policy';
 const credentials=z.object({email:z.email().max(254),password:z.string().min(8).max(128)});
-const signUpSchema=credentials.extend({acceptTerms:z.literal(true)});
+const signUpSchema=credentials.extend({confirmPassword:z.string(),acceptTerms:z.literal(true)});
 export async function POST(request:NextRequest,{params}:{params:Promise<{action:string}>}){
  const {action}=await params;
  if(!['inscription','connexion','deconnexion'].includes(action))return NextResponse.json({error:'Action inconnue'},{status:404});
@@ -14,9 +15,15 @@ export async function POST(request:NextRequest,{params}:{params:Promise<{action:
  if(action==='deconnexion'){const {error}=await client.auth.signOut();return error?NextResponse.json({error:'Déconnexion impossible'},{status:500}):response;}
  let body:unknown;try{body=await request.json()}catch{return NextResponse.json({error:'Données invalides'},{status:400})}
  const parsed=(action==='inscription'?signUpSchema:credentials).safeParse(body);
- if(!parsed.success)return NextResponse.json({error:'Vérifiez votre adresse, votre mot de passe (8 caractères minimum) et votre accord aux conditions.'},{status:400});
+ if(!parsed.success)return NextResponse.json({error:'Vérifiez les informations saisies et votre accord aux conditions.'},{status:400});
  const {email,password}=parsed.data;
  if(action==='inscription'){
+  const signup=parsed.data as z.infer<typeof signUpSchema>;
+  const policyError=passwordPolicyError(password);
+  if(policyError)return NextResponse.json({error:policyError},{status:400});
+  if(password!==signup.confirmPassword)return NextResponse.json({error:'Les deux mots de passe ne correspondent pas.'},{status:400});
+  try{if(await isCompromisedPassword(password))return NextResponse.json({error:'Ce mot de passe figure dans une liste de mots de passe compromis. Choisissez-en un autre.'},{status:400});}
+  catch{return NextResponse.json({error:'La vérification de sécurité du mot de passe est temporairement indisponible. Réessayez plus tard.'},{status:503});}
   const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:`${request.nextUrl.origin}/auth/callback`}});
   if(error)return NextResponse.json({error:error.message},{status:400});
   const previous=response;response=NextResponse.json({ok:true,confirmationRequired:!data.session});previous.cookies.getAll().forEach(cookie=>response.cookies.set(cookie));
