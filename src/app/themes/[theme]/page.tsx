@@ -1,0 +1,7 @@
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { search } from '@/features/search/search';
+import { verseUrl } from '@/features/bible/data';
+const themes:Record<string,{title:string;intro:string;query:string}>={pardon:{title:'Le pardon dans les Évangiles',intro:'Explorez les paroles et récits des Évangiles qui évoquent le pardon.',query:'pardon'},foi:{title:'La foi dans les Évangiles',intro:'Découvrez les passages qui parlent de la foi.',query:'foi'},amour:{title:'L’amour dans les Évangiles',intro:'Lisez les passages qui évoquent l’amour et le prochain.',query:'amour'}};
+export function generateStaticParams(){return Object.keys(themes).map(theme=>({theme}));}
+export default async function ThemePage({params}:{params:Promise<{theme:string}>}){const {theme}=await params;const data=themes[theme];if(!data)notFound();return <main className="container" style={{maxWidth:880}}><div className="breadcrumb"><Link href="/">Accueil</Link> / Thèmes / {theme}</div><h1 className="page-title">{data.title}</h1><p className="section-sub">{data.intro} Les résultats sont tirés directement du texte Louis Segond 1910.</p>{search(data.query,12).map(r=><article className="result" key={`${r.book}-${r.chapter}-${r.verse.number}`}><Link href={verseUrl(r.book,r.chapter,r.verse.number)}><h2>{r.name} {r.chapter}:{r.verse.number} →</h2></Link><p>{r.verse.text}</p></article>)}</main>}

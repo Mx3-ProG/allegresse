@@ -1,0 +1,22 @@
+{
+  "translation": "ls1910",
+  "books": {
+    "matthieu": {
+      "chapters": 28,
+      "verses": 1071
+    },
+    "marc": {
+      "chapters": 16,
+      "verses": 680
+    },
+    "luc": {
+      "chapters": 24,
+      "verses": 1151
+    },
+    "jean": {
+      "chapters": 21,
+      "verses": 879
+    }
+  },
+  "sha256": "eb1d63874e1e470da53d3e54ff19e8b056c1e41843c53b709ffd235566f088c9"
+}
