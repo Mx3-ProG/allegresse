@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { BookOpen, Bookmark, Highlighter, PenLine, Repeat2, Sparkles, Trophy, Zap } from 'lucide-react';
-import { createClient } from '@/lib/supabase/server';
+import { createClient } from '@/core/db/server';
 import { SignOutButton } from '@/components/SignOutButton';
 
 export const metadata: Metadata = { title: 'Mon espace', robots: { index: false } };

@@ -1,5 +1,5 @@
 import QRCode from 'qrcode';
-import { getVerse } from '@/features/bible/data';
+import { getVerse } from '@/modules/bible/data';
 export async function GET(request:Request,{params}:{params:Promise<{reference:string}>}){
  const {reference}=await params;
  const match=reference.match(/^(matthieu|marc|luc|jean)-(\d{1,2})-(\d{1,2})$/);

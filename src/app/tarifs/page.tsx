@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { authConfigured } from '@/lib/supabase/config';
+import { authConfigured } from '@/core/db/config';
 
 export const metadata: Metadata = { title: 'Tarifs et compte', description: 'Lecture gratuite et accès au compte Allégresse à 4,99 € par mois et par utilisateur.' };
 

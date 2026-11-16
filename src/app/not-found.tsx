@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { chapterUrl, getVerse } from '@/features/bible/data';
+import { chapterUrl, getVerse } from '@/modules/bible/data';
 
 export default function NotFound() {
   const verse = getVerse('jean', 14, 6)!;

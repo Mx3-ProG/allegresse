@@ -1,8 +1,8 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { authConfigured } from '@/lib/supabase/config';
-import { isCompromisedPassword, passwordPolicyError } from '@/lib/password-policy';
+import { authConfigured } from '@/core/db/config';
+import { isCompromisedPassword, passwordPolicyError } from '@/core/auth/password-policy';
 const credentials=z.object({email:z.email().max(254),password:z.string().min(8).max(128)});
 const signUpSchema=credentials.extend({confirmPassword:z.string(),acceptTerms:z.literal(true)});
 export async function POST(request:NextRequest,{params}:{params:Promise<{action:string}>}){

@@ -1,6 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
-import { authConfigured } from '@/lib/supabase/config';
+import { authConfigured } from '@/core/db/config';
 export async function proxy(request:NextRequest){
  if(!authConfigured())return NextResponse.next({request});
  let response=NextResponse.next({request});

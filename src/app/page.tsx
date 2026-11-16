@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { SearchForm } from '@/components/SearchForm';
-import { books, chapterUrl, getVerse } from '@/features/bible/data';
+import { books, chapterUrl, getVerse } from '@/modules/bible/data';
 const descriptions: Record<string,string> = { matthieu: 'Le Royaume des cieux et les enseignements de Jésus.', marc: 'Un récit vivant des actes et de la mission de Jésus.', luc: 'La compassion de Jésus et sa rencontre avec chacun.', jean: 'La vie, la lumière et la Parole faite chair.' };
 const suggestions = ['Que dit Jésus sur le pardon ?', 'Jean 3:16', 'Les paraboles de Jésus', 'Les miracles de Jésus', 'Le Sermon sur la montagne'];
 export default function HomePage() {

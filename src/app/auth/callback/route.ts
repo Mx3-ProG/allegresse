@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
-import { authConfigured } from '@/lib/supabase/config';
+import { authConfigured } from '@/core/db/config';
 export async function GET(request:NextRequest){
  const destination=new URL('/compte',request.url);
  if(!authConfigured())return NextResponse.redirect(new URL('/connexion',request.url));
