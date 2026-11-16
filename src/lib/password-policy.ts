@@ -10,7 +10,7 @@ export function passwordPolicyError(password: string): string | null {
 export async function isCompromisedPassword(password: string): Promise<boolean> {
   const hash = createHash('sha1').update(password, 'utf8').digest('hex').toUpperCase();
   const response = await fetch(`https://api.pwnedpasswords.com/range/${hash.slice(0, 5)}`, {
-    headers: { 'User-Agent': 'Bibleva-Password-Check/1.0', 'Add-Padding': 'true' },
+    headers: { 'User-Agent': 'Allegresse-Password-Check/1.0', 'Add-Padding': 'true' },
     cache: 'no-store', signal: AbortSignal.timeout(5000),
   });
   if (!response.ok) throw new Error('Password breach check unavailable');

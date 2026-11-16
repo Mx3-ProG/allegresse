@@ -1,4 +1,4 @@
-# Architecture initiale de Bibléva
+# Architecture initiale de Allégresse
 
 ## État du dépôt
 

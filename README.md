@@ -1,4 +1,4 @@
-# Bibléva
+# Allégresse
 
 Application publique pour lire et rechercher les quatre Évangiles. Fondations d'un produit plus vaste décrites dans [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) et état réel dans [docs/STATUS.md](docs/STATUS.md).
 

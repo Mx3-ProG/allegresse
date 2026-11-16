@@ -9,7 +9,7 @@
 | SEO technique | Partiellement implémenté | Métadonnées, sitemap, robots ; performance terrain non mesurée |
 | Design responsive | Implémenté mais non testé en navigateur | CSS mobile et ordinateur |
 | Supabase et RLS | Architecture préparée | Migration non appliquée à un projet distant |
-| Bibléva Plus et paiements | Bloqué par une intégration | Aucun produit ou paiement configuré |
+| Allégresse Plus et paiements | Bloqué par une intégration | Aucun produit ou paiement configuré |
 | Authentification | Partiellement implémentée | Projet Supabase relié localement ; parcours e-mail non vérifié de bout en bout |
 | Notes, favoris, reprise | Architecture préparée | Tables et politiques, pas encore d'interface |
 | PWA et hors connexion | Non commencé | — |

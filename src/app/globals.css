@@ -84,3 +84,5 @@ h1,h2,h3,p,blockquote{overflow-wrap:break-word}
   .mobile-nav{font-size:10px}
   .mobile-nav svg{width:18px;height:18px}
 }
+
+@media(max-width:760px){.cookie-panel{padding:18px;box-shadow:0 10px 32px #17283d22}.cookie-copy h2{font-size:21px;line-height:1.2}.cookie-copy p{margin:10px 0;line-height:1.5}.cookie-actions{display:flex;gap:10px}.cookie-actions button{min-width:0}.footer{padding-bottom:110px}}
