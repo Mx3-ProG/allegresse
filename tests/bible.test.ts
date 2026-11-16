@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { books, getChapter, getVerse } from '../src/features/bible/data';
-import { parseReference, search } from '../src/features/search/search';
+import { books, getChapter, getVerse } from '../src/modules/bible/data';
+import { parseReference, search } from '../src/modules/search/search';
 
 describe('corpus des Évangiles', () => {
   it('contient les quatre livres et 89 chapitres sans lacune', () => {

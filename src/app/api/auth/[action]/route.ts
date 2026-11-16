@@ -3,8 +3,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { authConfigured } from '@/core/db/config';
 import { isCompromisedPassword, passwordPolicyError } from '@/core/auth/password-policy';
-const credentials=z.object({email:z.email().max(254),password:z.string().min(8).max(128)});
-const signUpSchema=credentials.extend({confirmPassword:z.string(),acceptTerms:z.literal(true)});
+import { usernameError, normalizeUsername } from '@/modules/account/profile/validation';
+const credentials=z.object({email:z.email().max(254),password:z.string().min(8).max(128),next:z.enum(['/compte','/compte/abonnement']).optional()});
+const signUpSchema=credentials.extend({confirmPassword:z.string(),username:z.string().min(3).max(24),acceptTerms:z.literal(true)});
 export async function POST(request:NextRequest,{params}:{params:Promise<{action:string}>}){
  const {action}=await params;
  if(!['inscription','connexion','deconnexion'].includes(action))return NextResponse.json({error:'Action inconnue'},{status:404});
@@ -22,9 +23,13 @@ export async function POST(request:NextRequest,{params}:{params:Promise<{action:
   const policyError=passwordPolicyError(password);
   if(policyError)return NextResponse.json({error:policyError},{status:400});
   if(password!==signup.confirmPassword)return NextResponse.json({error:'Les deux mots de passe ne correspondent pas.'},{status:400});
+  const username=normalizeUsername(signup.username);
+  const usernameValidationError=usernameError(username);
+  if(usernameValidationError)return NextResponse.json({error:usernameValidationError},{status:400});
   try{if(await isCompromisedPassword(password))return NextResponse.json({error:'Ce mot de passe figure dans une liste de mots de passe compromis. Choisissez-en un autre.'},{status:400});}
   catch{return NextResponse.json({error:'La vérification de sécurité du mot de passe est temporairement indisponible. Réessayez plus tard.'},{status:503});}
-  const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:`${request.nextUrl.origin}/auth/callback`}});
+  const next=signup.next==='/compte/abonnement'?'?next=%2Fcompte%2Fabonnement':'';
+  const {data,error}=await client.auth.signUp({email,password,options:{emailRedirectTo:`${request.nextUrl.origin}/auth/callback${next}`,data:{username}}});
   if(error)return NextResponse.json({error:error.message},{status:400});
   const previous=response;response=NextResponse.json({ok:true,confirmationRequired:!data.session});previous.cookies.getAll().forEach(cookie=>response.cookies.set(cookie));
  }else{

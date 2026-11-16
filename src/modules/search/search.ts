@@ -1,4 +1,4 @@
-import { books, type Verse } from '@/modules/bible/data';
+import { books, type Verse } from '../bible/data';
 
 export type SearchResult = { book: string; name: string; chapter: number; verse: Verse; score: number };
 export function normalize(value: string) { return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[’']/g, ' ').replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim(); }

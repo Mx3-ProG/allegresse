@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { createHash } from 'node:crypto';
-import { isCompromisedPassword, passwordPolicyError } from '../src/lib/password-policy';
+import { isCompromisedPassword, passwordPolicyError } from '../src/core/auth/password-policy';
 
 describe('mot de passe à la création de compte', () => {
   afterEach(() => vi.unstubAllGlobals());

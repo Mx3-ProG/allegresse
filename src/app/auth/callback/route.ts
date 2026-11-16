@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
 import { authConfigured } from '@/core/db/config';
 export async function GET(request:NextRequest){
- const destination=new URL('/compte',request.url);
+ const next=request.nextUrl.searchParams.get('next');
+ const destination=new URL(next==='/nouveau-mot-de-passe'||next==='/compte/abonnement'?next:'/compte',request.url);
  if(!authConfigured())return NextResponse.redirect(new URL('/connexion',request.url));
  const code=request.nextUrl.searchParams.get('code');
  if(!code)return NextResponse.redirect(new URL('/connexion?erreur=confirmation',request.url));

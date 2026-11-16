@@ -1,0 +1,66 @@
+# Modèles locaux. Sur un projet Supabase hébergé, copier chaque HTML dans Auth > Email Templates.
+# Le projet hébergé utilise le transport intégré Supabase tant qu’aucun SMTP personnalisé n’est configuré.
+# Les paramètres ci-dessous ne modifient pas le projet hébergé.
+
+[auth]
+site_url = "https://allegresse.vercel.app"
+additional_redirect_urls = ["https://allegresse.vercel.app/auth/callback", "https://allegresse.vercel.app/auth/callback?next=/nouveau-mot-de-passe", "http://localhost:3000/auth/callback", "http://localhost:3000/auth/callback?next=/nouveau-mot-de-passe"]
+
+[auth.email.template.confirmation]
+subject = "Confirmez votre adresse e-mail"
+content_path = "./templates/confirmation.html"
+
+[auth.email.template.invite]
+subject = "Invitation à rejoindre Allégresse"
+content_path = "./templates/invite.html"
+
+[auth.email.template.recovery]
+subject = "Réinitialisez votre mot de passe"
+content_path = "./templates/recovery.html"
+
+[auth.email.template.magic_link]
+subject = "Votre lien de connexion Allégresse"
+content_path = "./templates/magic_link.html"
+
+[auth.email.template.email_change]
+subject = "Confirmez votre nouvelle adresse"
+content_path = "./templates/email_change.html"
+
+[auth.email.template.reauthentication]
+subject = "Votre code de vérification Allégresse"
+content_path = "./templates/reauthentication.html"
+
+[auth.email.notification.password_changed]
+enabled = true
+subject = "Votre mot de passe a été modifié"
+content_path = "./templates/password_changed.html"
+
+[auth.email.notification.email_changed]
+enabled = true
+subject = "Votre adresse e-mail a été modifiée"
+content_path = "./templates/email_changed.html"
+
+[auth.email.notification.phone_changed]
+enabled = true
+subject = "Votre numéro de téléphone a été modifié"
+content_path = "./templates/phone_changed.html"
+
+[auth.email.notification.mfa_factor_enrolled]
+enabled = true
+subject = "Une méthode de vérification a été ajoutée"
+content_path = "./templates/mfa_factor_enrolled.html"
+
+[auth.email.notification.mfa_factor_unenrolled]
+enabled = true
+subject = "Une méthode de vérification a été supprimée"
+content_path = "./templates/mfa_factor_unenrolled.html"
+
+[auth.email.notification.identity_linked]
+enabled = true
+subject = "Une méthode de connexion a été liée"
+content_path = "./templates/identity_linked.html"
+
+[auth.email.notification.identity_unlinked]
+enabled = true
+subject = "Une méthode de connexion a été retirée"
+content_path = "./templates/identity_unlinked.html"
