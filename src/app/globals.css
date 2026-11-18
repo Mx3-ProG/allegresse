@@ -132,6 +132,15 @@ h1,h2,h3,p,blockquote{overflow-wrap:break-word}
 
 .theme-toggle{display:inline-grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:100px;background:var(--card);color:var(--ink);cursor:pointer;transition:background .2s,border-color .2s}.theme-toggle:hover{border-color:var(--gold);color:var(--gold)}.mobile-theme{display:none}@media(max-width:760px){.mobile-theme{display:grid;place-items:center}}
 
+/* Évangiles : cartes-icônes (tétramorphe) */
+.gospel-card .gospel-art-wrap{position:relative;display:block;margin:-6px 0 14px;overflow:hidden;border-radius:14px}
+.gospel-card .gospel-art{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:var(--surface-2)}
+.gospel-card .gospel-art-wrap .num{position:absolute;left:15px;bottom:10px;color:#fff8e2;text-shadow:0 2px 7px rgba(22,40,63,.65)}
+.gospel-card .gospel-symbol{display:block;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+.gospel-card h3{margin:8px 0 6px}
+@media(prefers-reduced-motion:no-preference){.gospel-card:hover .gospel-art{transform:scale(1.02)}}
+.gospel-card .gospel-art{transition:transform .25s ease}
+
 html[data-theme="dark"] .loading-page{background:radial-gradient(circle at 50% 42%,#2a1a3a 0,#1a1024 68%)}
 html[data-theme="dark"] .loading-page p{color:var(--gold)}
 html[data-theme="dark"] .not-found-page{background:linear-gradient(#1a1024 0%,#241533 86%)}

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Icône byzantine de l’aigle, symbole de l’Évangile de Jean">
+  <title>L’Aigle — Évangile de Jean</title>
+  <defs>
+    <linearGradient id="j-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e7b8"/><stop offset=".55" stop-color="#e7c87f"/><stop offset="1" stop-color="#cfa957"/>
+    </linearGradient>
+    <radialGradient id="j-glow" cx=".5" cy=".38" r=".72">
+      <stop offset="0" stop-color="#fff8e2" stop-opacity=".95"/><stop offset="1" stop-color="#fff8e2" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="j-clip"><rect x="8" y="8" width="384" height="384"/></clipPath>
+  </defs>
+  <rect width="400" height="400" fill="#6f5220"/>
+  <rect x="8" y="8" width="384" height="384" fill="url(#j-gold)"/>
+  <g clip-path="url(#j-clip)" fill="#fff6dc" opacity=".18">
+    <path d="M200 200 L196 -90 L204 -90 Z"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(30 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(60 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(90 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(120 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(150 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(180 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(210 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(240 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(270 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(300 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(330 200 200)"/>
+  </g>
+  <rect x="8" y="8" width="384" height="384" fill="url(#j-glow)"/>
+  <rect x="20" y="20" width="360" height="360" fill="none" stroke="#6f5220" stroke-width="2.5" opacity=".7"/>
+  <g fill="#6f5220" opacity=".8">
+    <rect x="29" y="29" width="14" height="14" transform="rotate(45 36 36)"/>
+    <rect x="357" y="29" width="14" height="14" transform="rotate(45 364 36)"/>
+    <rect x="29" y="357" width="14" height="14" transform="rotate(45 36 364)"/>
+    <rect x="357" y="357" width="14" height="14" transform="rotate(45 364 364)"/>
+  </g>
+
+  <!-- Halo -->
+  <circle cx="200" cy="132" r="64" fill="#fdf3d7" opacity=".92" stroke="#6f5220" stroke-width="3"/>
+
+  <!-- Livre sur lequel l’aigle est posé -->
+  <rect x="142" y="340" width="116" height="26" rx="5" fill="#8b2f34" stroke="#6f5220" stroke-width="2.5"/>
+  <path d="M150 350 H250" stroke="#f6e3b3" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Griffes -->
+  <g fill="none" stroke="#e6b84f" stroke-width="6" stroke-linecap="round">
+    <path d="M186 312 L182 340"/><path d="M214 312 L218 340"/>
+    <path d="M176 336 H190"/><path d="M210 336 H224"/>
+  </g>
+
+  <!-- Aile gauche (miroir pour la droite) -->
+  <g fill="#1f3a5f">
+    <path id="j-wing" d="M178 196 Q 112 126 40 104 C 58 168, 92 224, 148 256 C 166 246, 176 224, 178 196 Z"/>
+    <use href="#j-wing" transform="translate(400 0) scale(-1 1)"/>
+  </g>
+  <!-- Plumage -->
+  <g fill="none" stroke="#cfa957" stroke-width="3" opacity=".55" stroke-linecap="round">
+    <path d="M168 206 C 132 228, 96 220, 64 174"/>
+    <path d="M164 232 C 134 250, 104 242, 78 204"/>
+    <path d="M232 206 C 268 228, 304 220, 336 174"/>
+    <path d="M236 232 C 266 250, 296 242, 322 204"/>
+  </g>
+
+  <!-- Corps -->
+  <ellipse cx="200" cy="240" rx="44" ry="78" fill="#1f3a5f"/>
+  <path d="M176 300 L190 356 L200 336 L210 356 L224 300 Z" fill="#1f3a5f"/>
+  <g fill="none" stroke="#cfa957" stroke-width="2.5" opacity=".5">
+    <path d="M186 318 L194 344"/><path d="M214 318 L206 344"/>
+  </g>
+
+  <!-- Tête -->
+  <ellipse cx="200" cy="136" rx="35" ry="33" fill="#f7f1e3" stroke="#6f5220" stroke-width="2"/>
+  <path d="M189 146 L211 146 L205 158 L200 176 L195 158 Z" fill="#e6b84f" stroke="#6f5220" stroke-width="2" stroke-linejoin="round"/>
+  <g fill="#1f3a5f">
+    <circle cx="187" cy="130" r="5"/>
+    <circle cx="213" cy="130" r="5"/>
+  </g>
+  <g fill="none" stroke="#1f3a5f" stroke-width="3" stroke-linecap="round">
+    <path d="M180 121 Q 187 117 194 120"/>
+    <path d="M206 120 Q 213 117 220 121"/>
+  </g>
+</svg>

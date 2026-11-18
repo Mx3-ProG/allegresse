@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Icône byzantine du lion, symbole de l’Évangile de Marc">
+  <title>Le Lion — Évangile de Marc</title>
+  <defs>
+    <linearGradient id="m-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e7b8"/><stop offset=".55" stop-color="#e7c87f"/><stop offset="1" stop-color="#cfa957"/>
+    </linearGradient>
+    <radialGradient id="m-glow" cx=".5" cy=".38" r=".72">
+      <stop offset="0" stop-color="#fff8e2" stop-opacity=".95"/><stop offset="1" stop-color="#fff8e2" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="m-clip"><rect x="8" y="8" width="384" height="384"/></clipPath>
+  </defs>
+  <rect width="400" height="400" fill="#6f5220"/>
+  <rect x="8" y="8" width="384" height="384" fill="url(#m-gold)"/>
+  <g clip-path="url(#m-clip)" fill="#fff6dc" opacity=".18">
+    <path d="M200 200 L196 -90 L204 -90 Z"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(30 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(60 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(90 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(120 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(150 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(180 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(210 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(240 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(270 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(300 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(330 200 200)"/>
+  </g>
+  <rect x="8" y="8" width="384" height="384" fill="url(#m-glow)"/>
+  <rect x="20" y="20" width="360" height="360" fill="none" stroke="#6f5220" stroke-width="2.5" opacity=".7"/>
+  <g fill="#6f5220" opacity=".8">
+    <rect x="29" y="29" width="14" height="14" transform="rotate(45 36 36)"/>
+    <rect x="357" y="29" width="14" height="14" transform="rotate(45 364 36)"/>
+    <rect x="29" y="357" width="14" height="14" transform="rotate(45 36 364)"/>
+    <rect x="357" y="357" width="14" height="14" transform="rotate(45 364 364)"/>
+  </g>
+
+  <!-- Halo -->
+  <circle cx="132" cy="196" r="90" fill="#fdf3d7" opacity=".92" stroke="#6f5220" stroke-width="3"/>
+
+  <!-- Ombre au sol -->
+  <ellipse cx="235" cy="320" rx="150" ry="12" fill="#6f5220" opacity=".35"/>
+
+  <!-- Queue -->
+  <path d="M318 252 C 366 240, 378 184, 346 150" fill="none" stroke="#1f3a5f" stroke-width="13" stroke-linecap="round"/>
+  <path d="M346 128 C 366 138, 370 166, 350 178 C 330 170, 328 140, 346 128 Z" fill="#1f3a5f"/>
+
+  <!-- Corps -->
+  <g fill="#1f3a5f">
+    <ellipse cx="235" cy="252" rx="98" ry="48"/>
+    <circle cx="303" cy="246" r="46"/>
+    <circle cx="163" cy="254" r="44"/>
+    <!-- Pattes arrière -->
+    <circle cx="303" cy="268" r="30"/>
+    <rect x="253" y="274" width="24" height="42" rx="11"/>
+    <rect x="288" y="272" width="30" height="44" rx="14"/>
+    <!-- Pattes avant -->
+    <rect x="150" y="268" width="26" height="48" rx="12"/>
+    <rect x="190" y="272" width="24" height="44" rx="11"/>
+    <!-- Coussinets -->
+    <ellipse cx="163" cy="316" rx="23" ry="9"/>
+    <ellipse cx="202" cy="316" rx="21" ry="8"/>
+    <ellipse cx="303" cy="316" rx="25" ry="9"/>
+    <ellipse cx="265" cy="316" rx="21" ry="8"/>
+  </g>
+
+  <!-- Crinière -->
+  <g fill="#2b4a75">
+    <circle cx="132" cy="198" r="66"/>
+    <circle cx="198" cy="198" r="17"/>
+    <circle cx="178" cy="148" r="17"/>
+    <circle cx="132" cy="130" r="17"/>
+    <circle cx="86" cy="148" r="17"/>
+    <circle cx="66" cy="198" r="17"/>
+    <circle cx="86" cy="248" r="17"/>
+    <circle cx="132" cy="266" r="17"/>
+    <circle cx="178" cy="248" r="17"/>
+  </g>
+
+  <!-- tête -->
+  <g fill="#1f3a5f">
+    <ellipse cx="122" cy="206" rx="44" ry="42"/>
+    <ellipse cx="148" cy="152" rx="14" ry="17"/>
+    <ellipse cx="86" cy="222" rx="31" ry="21"/>
+    <ellipse cx="62" cy="214" rx="11" ry="9"/>
+  </g>
+  <!-- Œil -->
+  <ellipse cx="104" cy="194" rx="8" ry="5.5" fill="#f6e3b3"/>
+  <circle cx="103" cy="194" r="2.8" fill="#16283f"/>
+  <!-- Museau -->
+  <path d="M64 232 Q 80 241 98 234" fill="none" stroke="#cfa957" stroke-width="3" stroke-linecap="round"/>
+</svg>

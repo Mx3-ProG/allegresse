@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Icône byzantine de l’homme ailé, symbole de l’Évangile de Matthieu">
+  <title>L’Homme ailé — Évangile de Matthieu</title>
+  <defs>
+    <linearGradient id="t-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8e7b8"/><stop offset=".55" stop-color="#e7c87f"/><stop offset="1" stop-color="#cfa957"/>
+    </linearGradient>
+    <radialGradient id="t-glow" cx=".5" cy=".38" r=".72">
+      <stop offset="0" stop-color="#fff8e2" stop-opacity=".95"/><stop offset="1" stop-color="#fff8e2" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="t-clip"><rect x="8" y="8" width="384" height="384"/></clipPath>
+    <clipPath id="t-halo"><circle cx="200" cy="140" r="64"/></clipPath>
+  </defs>
+  <rect width="400" height="400" fill="#6f5220"/>
+  <rect x="8" y="8" width="384" height="384" fill="url(#t-gold)"/>
+  <g clip-path="url(#t-clip)" fill="#fff6dc" opacity=".18">
+    <path d="M200 200 L196 -90 L204 -90 Z"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(30 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(60 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(90 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(120 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(150 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(180 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(210 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(240 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(270 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(300 200 200)"/>
+    <path d="M200 200 L196 -90 L204 -90 Z" transform="rotate(330 200 200)"/>
+  </g>
+  <rect x="8" y="8" width="384" height="384" fill="url(#t-glow)"/>
+  <rect x="20" y="20" width="360" height="360" fill="none" stroke="#6f5220" stroke-width="2.5" opacity=".7"/>
+  <g fill="#6f5220" opacity=".8">
+    <rect x="29" y="29" width="14" height="14" transform="rotate(45 36 36)"/>
+    <rect x="357" y="29" width="14" height="14" transform="rotate(45 364 36)"/>
+    <rect x="29" y="357" width="14" height="14" transform="rotate(45 36 364)"/>
+    <rect x="357" y="357" width="14" height="14" transform="rotate(45 364 364)"/>
+  </g>
+
+  <!-- Halo crucifère -->
+  <circle cx="200" cy="140" r="64" fill="#fdf3d7" opacity=".92" stroke="#6f5220" stroke-width="3"/>
+  <g clip-path="url(#t-halo)" stroke="#6f5220" stroke-width="4" opacity=".75">
+    <path d="M200 76 V 204"/>
+    <path d="M136 140 H 264"/>
+    <path d="M178 104 H 222"/>
+  </g>
+
+  <!-- Ailes (gauche, miroir pour la droite) -->
+  <g fill="#2b4a75">
+    <path id="t-wing" d="M172 236 Q 116 160 56 70 C 62 142, 86 202, 120 254 C 142 276, 162 268, 172 236 Z"/>
+    <use href="#t-wing" transform="translate(400 0) scale(-1 1)"/>
+  </g>
+  <g fill="none" stroke="#f6e3b3" stroke-width="3" opacity=".5" stroke-linecap="round">
+    <path d="M158 244 C 130 214, 100 168, 78 112"/>
+    <path d="M134 258 C 112 226, 92 186, 80 150"/>
+    <path d="M242 244 C 270 214, 300 168, 322 112"/>
+    <path d="M266 258 C 288 226, 308 186, 320 150"/>
+  </g>
+
+  <!-- Manteau et robe -->
+  <path d="M200 214 C 152 222, 122 268, 116 350 Q 200 372 284 350 C 278 268, 248 222, 200 214 Z" fill="#1f3a5f"/>
+  <path d="M214 218 C 252 238, 280 286, 274 352 L 246 357 C 250 302, 232 252, 202 227 Z" fill="#8b2f34"/>
+  <path d="M130 344 Q 200 362 270 344" fill="none" stroke="#cfa957" stroke-width="3" opacity=".7"/>
+
+  <!-- Cou -->
+  <rect x="186" y="186" width="28" height="40" fill="#e8c9a0"/>
+
+  <!-- Visage -->
+  <ellipse cx="200" cy="150" rx="34" ry="40" fill="#e8c9a0"/>
+  <!-- Cheveux -->
+  <path d="M166 170 C 150 156, 155 104, 200 102 C 245 104, 250 156, 234 170 C 237 142, 227 126, 200 126 C 173 126, 163 142, 166 170 Z" fill="#1f3a5f"/>
+  <!-- Barbe -->
+  <path d="M174 164 C 176 204, 224 204, 226 164 C 224 196, 176 196, 174 164 Z" fill="#1f3a5f"/>
+  <ellipse cx="200" cy="186" rx="24" ry="18" fill="#1f3a5f"/>
+  <!-- Yeux -->
+  <g fill="#f7f1e3" stroke="#1f3a5f" stroke-width="1.5">
+    <ellipse cx="187" cy="146" rx="8" ry="5"/>
+    <ellipse cx="213" cy="146" rx="8" ry="5"/>
+  </g>
+  <circle cx="187" cy="146" r="3" fill="#1f3a5f"/>
+  <circle cx="213" cy="146" r="3" fill="#1f3a5f"/>
+  <g fill="none" stroke="#1f3a5f" stroke-width="2.5" stroke-linecap="round">
+    <path d="M179 135 Q 187 130 196 134"/>
+    <path d="M204 134 Q 213 130 221 135"/>
+    <path d="M197 148 L 195 162 Q 200 167 205 162 L 203 148"/>
+  </g>
+
+  <!-- Livre tenu -->
+  <rect x="174" y="274" width="76" height="54" rx="5" fill="#8b2f34" stroke="#6f5220" stroke-width="3"/>
+  <path d="M184 286 H240" stroke="#f6e3b3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M212 274 V 328" stroke="#6f5220" stroke-width="2.5" opacity=".7"/>
+  <!-- Mains -->
+  <ellipse cx="176" cy="304" rx="13" ry="11" fill="#e8c9a0"/>
+  <ellipse cx="248" cy="304" rx="13" ry="11" fill="#e8c9a0"/>
+</svg>
